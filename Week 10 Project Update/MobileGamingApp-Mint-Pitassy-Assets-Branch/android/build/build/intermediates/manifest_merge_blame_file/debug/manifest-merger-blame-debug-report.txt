@@ -1,0 +1,137 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.godotengine.mobilegamingapp"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+10        android:targetSdkVersion="33" />
+11
+12    <supports-screens
+12-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:9:5-13:40
+13        android:largeScreens="true"
+13-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:12:9-36
+14        android:normalScreens="true"
+14-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:11:9-37
+15        android:smallScreens="true"
+15-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:10:9-36
+16        android:xlargeScreens="true" />
+16-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:13:9-37
+17
+18    <uses-feature
+18-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:15:5-17:35
+19        android:glEsVersion="0x00030000"
+19-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:16:9-41
+20        android:required="true" />
+20-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:17:9-32
+21
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/src/debug/AndroidManifest.xml:11:5-67
+22-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/src/debug/AndroidManifest.xml:11:22-64
+23
+24    <application
+24-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:19:5-52:19
+25        android:allowBackup="false"
+25-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:21:9-36
+26        android:appCategory="game"
+26-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:23:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.2.0] /Users/jonathanhaberl/.gradle/caches/transforms-3/9bcb1a65f5938aad264f4d73e9a06f28/transformed/core-1.2.0/AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:hasFragileUserData="false"
+30-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:25:9-43
+31        android:icon="@mipmap/icon"
+31-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:22:9-36
+32        android:isGame="true"
+32-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:24:9-30
+33        android:label="@string/godot_project_name_string"
+33-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:20:9-58
+34        android:requestLegacyExternalStorage="false" >
+34-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:26:9-53
+35        <activity
+35-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:34:9-50:20
+36            android:name="com.godot.game.GodotApp"
+36-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:35:13-37
+37            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+37-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:42:13-141
+38            android:excludeFromRecents="false"
+38-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:39:13-47
+39            android:exported="true"
+39-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:40:13-36
+40            android:label="@string/godot_project_name_string"
+40-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:36:13-62
+41            android:launchMode="singleInstance"
+41-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:38:13-48
+42            android:resizeableActivity="true"
+42-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:43:13-47
+43            android:screenOrientation="portrait"
+43-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:41:13-50
+44            android:theme="@style/GodotAppSplashTheme" >
+44-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:37:13-55
+45            <intent-filter>
+45-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:46:13-49:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:47:17-69
+46-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:47:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:48:17-77
+48-->/Users/jonathanhaberl/Documents/Git/MobileGamingApp/android/build/AndroidManifest.xml:48:27-74
+49            </intent-filter>
+50        </activity>
+51        <!-- Records the version of the Godot editor used for building -->
+52        <meta-data
+53            android:name="org.godotengine.editor.version"
+54            android:value="4.1.1.stable" /> <!-- Records the version of the Godot library -->
+55        <meta-data
+55-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:9-16:44
+56            android:name="org.godotengine.library.version"
+56-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:15:13-59
+57            android:value="4.1.1.stable" />
+57-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:13-41
+58
+59        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+59-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-80
+59-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:18-77
+60
+61        <activity
+61-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:9-24:75
+62            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+62-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-70
+63            android:exported="false"
+63-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-37
+64            android:process=":phoenix"
+64-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:23:13-39
+65            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+65-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:13-72
+66
+67        <provider
+67-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:9-34:20
+68            android:name="androidx.core.content.FileProvider"
+68-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-62
+69            android:authorities="org.godotengine.mobilegamingapp.fileprovider"
+69-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-64
+70            android:exported="false"
+70-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-37
+71            android:grantUriPermissions="true" >
+71-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:13-47
+72            <meta-data
+72-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:13-33:64
+73                android:name="android.support.FILE_PROVIDER_PATHS"
+73-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:32:17-67
+74                android:resource="@xml/godot_provider_paths" />
+74-->[godot-lib.template_debug.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/9c5a10b9f0de0fbc7e522ed48f82044b/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:33:17-61
+75        </provider>
+76
+77        <meta-data
+77-->[GodotUniversalIntent.release.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/79183f5369dc0d5466cd9dab78054df7/transformed/jetified-GodotUniversalIntent.release/AndroidManifest.xml:11:9-13:92
+78            android:name="org.godotengine.plugin.v1.GodotUniversalIntent"
+78-->[GodotUniversalIntent.release.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/79183f5369dc0d5466cd9dab78054df7/transformed/jetified-GodotUniversalIntent.release/AndroidManifest.xml:12:13-74
+79            android:value="com.gmail.lamelynx.godotuniversalintent.GodotUniversalIntent" />
+79-->[GodotUniversalIntent.release.aar] /Users/jonathanhaberl/.gradle/caches/transforms-3/79183f5369dc0d5466cd9dab78054df7/transformed/jetified-GodotUniversalIntent.release/AndroidManifest.xml:13:13-89
+80    </application>
+81
+82</manifest>

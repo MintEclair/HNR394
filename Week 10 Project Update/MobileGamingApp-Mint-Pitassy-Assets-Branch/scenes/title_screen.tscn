@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4c2avbe4jxm7"]
+
+[ext_resource type="Texture2D" path="res://assets/Backgrounds/Title Screen.jpg" id="1_sk3fi"]
+[ext_resource type="Script" path="res://scenes/title_screen.gd" id="2_73wf4"]
+
+[node name="TitleScreen" type="Sprite2D"]
+position = Vector2(325.313, 578)
+scale = Vector2(0.575444, 0.473727)
+texture = ExtResource("1_sk3fi")
+script = ExtResource("2_73wf4")
+
+[node name="startButton" type="Button" parent="."]
+offset_left = -158.683
+offset_top = 310.305
+offset_right = 145.317
+offset_bottom = 658.305
+text = "Begin Button"
+flat = true
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]

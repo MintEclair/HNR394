@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgbtjy12nuchc"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_m8rk1"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.00535547
+script = ExtResource("1_m8rk1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_tree" type="Button" parent="VBoxContainer/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "My Tree
+"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_resources" type="Button" parent="VBoxContainer/HBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Resources
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_activities" type="Button" parent="VBoxContainer/HBoxContainer2/CenterContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Activities
+"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_journal" type="Button" parent="VBoxContainer/HBoxContainer2/CenterContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "My Journal
+"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_survey" type="Button" parent="VBoxContainer/HBoxContainer3/CenterContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Survey
+"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_settings" type="Button" parent="VBoxContainer/HBoxContainer3/CenterContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Settings
+"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="btn_numbers" type="Button" parent="VBoxContainer/HBoxContainer4/CenterContainer"]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+text = "Emergency Numbers
+"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CenterContainer/btn_tree" to="." method="_on_btn_tree_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CenterContainer2/btn_resources" to="." method="_on_btn_resources_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CenterContainer/btn_activities" to="." method="_on_btn_activities_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CenterContainer2/btn_journal" to="." method="_on_btn_journal_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/CenterContainer/btn_survey" to="." method="_on_btn_survey_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/CenterContainer2/btn_settings" to="." method="_on_btn_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/CenterContainer/btn_numbers" to="." method="_on_btn_numbers_pressed"]

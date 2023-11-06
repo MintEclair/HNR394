@@ -1,0 +1,146 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1chfdr21lym3"]
+
+[ext_resource type="PackedScene" uid="uid://c5aohhydp6541" path="res://scenes/header.tscn" id="1_qr313"]
+[ext_resource type="Script" path="res://scenes/journal.gd" id="1_w18xc"]
+
+[node name="journal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w18xc")
+
+[node name="header" parent="." instance=ExtResource("1_qr313")]
+
+[node name="section_entry" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="journal_entry" type="TextEdit" parent="section_entry"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 100.0
+offset_right = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+
+[node name="btn_delete" type="Button" parent="section_entry"]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 22.0
+offset_right = 622.0
+offset_bottom = 53.0
+text = "Delete"
+
+[node name="section_password" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="section_password"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+
+[node name="vbox_unlock" type="VBoxContainer" parent="section_password/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="section_password/PanelContainer/vbox_unlock"]
+layout_mode = 2
+text = "Enter password to unlock journal entries"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="edit_password" type="LineEdit" parent="section_password/PanelContainer/vbox_unlock"]
+layout_mode = 2
+placeholder_text = "Password"
+alignment = 1
+secret = true
+virtual_keyboard_type = 6
+
+[node name="btn_unlock" type="Button" parent="section_password/PanelContainer/vbox_unlock"]
+layout_mode = 2
+text = "Unlock"
+
+[node name="vbox_set_pw" type="VBoxContainer" parent="section_password/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="section_password/PanelContainer/vbox_set_pw"]
+layout_mode = 2
+text = "Set password to lock journal entries"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="edit_password" type="LineEdit" parent="section_password/PanelContainer/vbox_set_pw"]
+layout_mode = 2
+placeholder_text = "Password"
+alignment = 1
+secret = true
+virtual_keyboard_type = 6
+
+[node name="edit_password_repeat" type="LineEdit" parent="section_password/PanelContainer/vbox_set_pw"]
+layout_mode = 2
+placeholder_text = "Repeat password"
+alignment = 1
+secret = true
+virtual_keyboard_type = 6
+
+[node name="btn_set" type="Button" parent="section_password/PanelContainer/vbox_set_pw"]
+layout_mode = 2
+text = "Set"
+
+[node name="section_list" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="section_list"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="list_journal" type="ItemList" parent="section_list/ScrollContainer"]
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/v_separation = 10
+theme_override_font_sizes/font_size = 30
+auto_height = true
+
+[node name="btn_add_entry" type="Button" parent="section_list"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "Add entry"
+
+[connection signal="back" from="header" to="." method="_on_header_back"]
+[connection signal="text_changed" from="section_entry/journal_entry" to="." method="_on_journal_entry_text_changed"]
+[connection signal="pressed" from="section_entry/btn_delete" to="." method="_on_btn_delete_pressed"]
+[connection signal="pressed" from="section_password/PanelContainer/vbox_unlock/btn_unlock" to="." method="_on_btn_unlock_pressed"]
+[connection signal="pressed" from="section_password/PanelContainer/vbox_set_pw/btn_set" to="." method="_on_btn_set_pressed"]
+[connection signal="item_clicked" from="section_list/ScrollContainer/list_journal" to="." method="_on_list_journal_item_clicked"]
+[connection signal="pressed" from="section_list/btn_add_entry" to="." method="_on_btn_add_entry_pressed"]
